@@ -17,7 +17,7 @@ public class ProcessSongWithSet {
 	
 	public void go(){
 		readSongFromTxt();
-		System.out.println(songSet);
+		display();
 	}
 	private void readSongFromTxt(){
 		File file = new File(FILE_PATH);
@@ -44,6 +44,10 @@ public class ProcessSongWithSet {
 		Song song = new Song(split[0],split[1],split[2],split[3]);
 		songSet.add(song);
 	}
-
+	private void display(){
+		for (Song str : songSet) {
+			System.out.println(str.getTitle()+" : "+str.getArtist());
+		}
+	}
 
 }

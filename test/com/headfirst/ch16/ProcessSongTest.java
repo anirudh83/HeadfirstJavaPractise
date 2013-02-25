@@ -19,6 +19,8 @@ public class ProcessSongTest {
 	@Test
 	public void testWithTreeSet(){
 		ProcessSongWithSet process = new ProcessSongWithSet();
+		System.out.println("**************** Without duplicates ******************");
 		process.go();
 	}
+	
 }

@@ -26,8 +26,9 @@ public class ProcessSongWithList {
 	public void go(){
 		readSongFromTxt();
 		Collections.sort(songList);
-		System.out.println(songList);
-		System.out.println("Now sorted by Artist name");
+		System.out.println("*******Sorted by Title********");
+		display();
+		System.out.println("*********Sorted by Artist name******");
 		
 		Comparator<Song> artistNameComparator = new Comparator<Song>(){
 			@Override
@@ -36,11 +37,11 @@ public class ProcessSongWithList {
 			}
 		};
 		Collections.sort(songList,artistNameComparator);
-		System.out.println(songList);
-		System.out.println("Now without duplicates");
+		display();
+		System.out.println("**********Now without duplicates********");
 		Set<Song> songSet = new HashSet<Song>();
 		songSet.addAll(songList);
-		System.out.println(songSet);
+		display();
 		
 		
 	}
@@ -68,5 +69,11 @@ public class ProcessSongWithList {
 		String[] split = line.split("/");
 		Song song = new Song(split[0],split[1],split[2],split[3]);
 		songList.add(song);
+	}
+	
+	private void display(){
+		for (Song str : songList) {
+			System.out.println(str.getTitle()+" : "+str.getArtist());
+		}
 	}
 }
