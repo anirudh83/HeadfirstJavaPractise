@@ -1,1 +1,1 @@
-Excerice examples of Head First Java Ch:16
+Excerice examples of Head First Java
