@@ -19,14 +19,12 @@ public class SortMountains {
 
 		Comparator<Mountain> ascendinghc = new Comparator<Mountain>() {
 			// if m1 >m2 return positive will sort ->Ascending
-			@Override
 			public int compare(Mountain m1, Mountain m2) {
 				return m1.getHeight() - m2.getHeight();
 			}
 		};
 		Comparator<Mountain> descendinghc = new Comparator<Mountain>() {
 			// if m2 >m1 return positive will sort ->Descnding
-			@Override
 			public int compare(Mountain m1, Mountain m2) {
 				return m2.getHeight() - m1.getHeight();
 			}
